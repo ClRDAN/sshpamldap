@@ -8,7 +8,7 @@ cp /opt/docker/pam_mount.conf.xml /etc/security/
 cp /opt/docker/nsswitch.conf /etc/
 ln -fs /etc/pam.d/system-auth.edt /etc/pam.d/system-auth
 ./authconfig.conf
-cp /opt/docker/sshd_conf /etc/ssh/sshd_config
+cp /opt/docker/sshd_config /etc/ssh/sshd_config
 useradd -g users local01 
 useradd -g users local02
 useradd -g users local03
