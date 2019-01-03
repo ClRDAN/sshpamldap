@@ -3,11 +3,10 @@
 # instalacion cliente PAM examen
 # - crear usuarios locales
 #----------------------------
-cp /opt/docker/system-auth.edt /etc/pam.d/system-auth.edt
 cp /opt/docker/sshd /etc/pam.d/
-cp /opt/docker/pam_mount.conf.xml /etc/security/
-cp /opt/docker/nsswitch.conf /etc/
+cp /opt/docker/system-auth.edt /etc/pam.d/system-auth.edt
 ln -fs /etc/pam.d/system-auth.edt /etc/pam.d/system-auth
+cp /opt/docker/nsswitch.conf /etc/
 ./authconfig.conf
 cp /opt/docker/sshd_config /etc/ssh/sshd_config
 cp /opt/docker/access.conf /etc/security/access.conf

@@ -2,7 +2,6 @@
 # This file is auto-generated.
 # User changes will be destroyed the next time authconfig is run.
 auth        required      pam_env.so
-auth	    sufficient	  pam_listfile.so onerr=fail item=user sense=allow file=/opt/docker/ssh_allowed
 auth        sufficient    pam_unix.so try_first_pass nullok
 auth	    sufficient	  pam_ldap.so
 auth        required      pam_deny.so
@@ -19,6 +18,5 @@ session     optional      pam_keyinit.so revoke
 session     required      pam_limits.so
 -Session     optional      pam_systemd.so
 session	    optional	  pam_mkhomedir.so  
-#session     sufficient    pam_access.so
 session     sufficient    pam_unix.so
-session	    sufficient	  pam_ldap.so
+session     sufficient    pam_ldap.so
