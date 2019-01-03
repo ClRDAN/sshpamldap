@@ -39,15 +39,15 @@ en la que copiamos dentro del container un par de claves previamente generadas.
 5. Establecemos restricciones de acceso por usuario y comprobamos que funciona, primero por separado con cada uno de los tres métodos de restricción y luego todo junto. La restricción tipo AllowUsers se establece en el archivo /etc/ssh/sshd_config, las restricciones de pam_access y pam_listfile necesitan cargar el módulo correspondiente en el archivo de configuración PAM para SSH llamado /etc/pam.d/sshd y un archivo de configuración auxiliar llamado /etc/security/access.conf y /opt/docker/ssh_allowed respectivamente. 
 
 En la configuración predefinida los módulos pam_access y pam_listfile están cargados como REQUIRED, por lo que para que un usuario pueda loguear debe estar autorizado POR LOS TRES MÉTODOS. Si se quiere que sea suficiente con estar autorizado en uno de ellos habría que tener en cuenta que un resultado de success en estos módulos tan sólo dice que ese usuario tiene permiso de acceso pero no lo autentifica. A continuación adjunto una tabla con los distintos usuarios con permisos de SSH y el resultado final al intentar loguear.
- __________________________________________________________________________
-| USUARIO   |   AllowUsers   |   PAM_ACCESS   |   PAM_LISTFILE |   ACCESO  |
-|--------------------------------------------------------------------------|
-| pere      |       V        |      V         |      V         |    V      |
-| pau       |       V        |      V         |      X         |    X      |
-| marta     |       V        |      X         |      V         |    X      |
-| jordi     |       X        |      V         |      V         |    X      |
-| local01   |       V        |      X         |      X         |    X      |
-| local02   |       X        |      V         |      X         |    X      |
-| local03   |       X        |      X         |      V         |    X      |
- __________________________________________________________________________
+ __________________________________________________________________________  
+| USUARIO   |   AllowUsers   |   PAM_ACCESS   |   PAM_LISTFILE |   ACCESO  |  
+|--------------------------------------------------------------------------|  
+| pere      |       V        |      V         |      V         |    V      |  
+| pau       |       V        |      V         |      X         |    X      |  
+| marta     |       V        |      X         |      V         |    X      |  
+| jordi     |       X        |      V         |      V         |    X      |  
+| local01   |       V        |      X         |      X         |    X      |  
+| local02   |       X        |      V         |      X         |    X      |  
+| local03   |       X        |      X         |      V         |    X      |  
+ __________________________________________________________________________  
  
