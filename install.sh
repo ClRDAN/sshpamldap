@@ -4,6 +4,7 @@
 # - crear usuarios locales
 #----------------------------
 cp /opt/docker/system-auth.edt /etc/pam.d/system-auth.edt
+cp /opt/docker/sshd /etc/pam.d/
 cp /opt/docker/pam_mount.conf.xml /etc/security/
 cp /opt/docker/nsswitch.conf /etc/
 ln -fs /etc/pam.d/system-auth.edt /etc/pam.d/system-auth

@@ -139,7 +139,7 @@ AcceptEnv XMODIFIERS
 # override default of no subsystems
 Subsystem	sftp	/usr/libexec/openssh/sftp-server
 
-AllowUsers local01 local02 pere pau
+AllowUsers local01 pere pau marta
 # Example of overriding settings on a per-user basis
 #Match User anoncvs
 #	X11Forwarding no
