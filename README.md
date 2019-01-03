@@ -59,8 +59,8 @@ docker run --rm --name sshd --hostname sshd --network redcasa -it agalilea/sshd
 docker run --rm --name ldap --hostname ldap --network redcasa -d agalilea/ldap
 ```
 ## Comandos para establecer conexión SSH
-Desde fuera de la red de containers "redcasa":
-``` ssh pere@172.18.0.3 -p 1022```
-Desde dentro de la red de containers "redcasa":
-```ssh pere@sshd -p 1022``` 
-La IP puede variar según cuántos dispositivos haya en la red al arrancar el servidor, para no tener que usar la IP cuando se conecte desde fuera de la red habría que configurar el servidor DNS para que resuelva el nombre o añadir una línea al archivo /etc/hosts del cliente desde el que conectamos.
+Desde fuera de la red de containers "redcasa":  
+``` ssh pere@172.18.0.3 -p 1022```  
+Desde dentro de la red de containers "redcasa":  
+```ssh pere@sshd -p 1022```  
+La IP puede variar según cuántos dispositivos haya en la red al arrancar el servidor, para no tener que usar la IP cuando se conecte desde fuera de la red habría que configurar el servidor DNS para que resuelva el nombre o añadir una línea al archivo /etc/hosts del cliente desde el que conectamos.  
