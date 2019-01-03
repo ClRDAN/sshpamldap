@@ -9,6 +9,7 @@ La imagen ya creada se encuentra en https://hub.docker.com/r/agalilea/
 ```docker pull agalilea/m06pam```  
 La imagen del servidor LDAP se encuentra en https://hub.docker.com/r/agalilea/ldap/  
 ```docker pull agalilea/ldap```  
+Los archivos para crear la imagen se encuentran en https://github.com/ClRDAN/sshpamldap  
 
 El repositorio contiene los siguientes archivos:
   * access.conf: archivo de configuración del módulo de PAM pam.access. Contiene una lista de usuarios con permiso para conectar por SSH. Al arrancar el container este archivo se copia en /etc/security/  
