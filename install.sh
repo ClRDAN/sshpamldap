@@ -17,5 +17,6 @@ echo "local01" | passwd --stdin local01
 echo "local02" | passwd --stdin local02
 echo "local03" | passwd --stdin local03
 ssh-keygen -t rsa -b 4096 -f /etc/ssh/ssh_host_rsa_key -N "" < /dev/null
-/usr/sbin/nslcd
-/usr/sbin/sshd
+/usr/sbin/nslcd && echo "nslcd OK"
+/usr/sbin/nscd && echo "nscd OK"
+/usr/sbin/sshd && echo "sshd OK"
